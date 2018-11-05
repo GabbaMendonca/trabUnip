@@ -11,7 +11,7 @@ struct Pessoa{
     char cpf[CP];
     int deficiencia;
     char descDef[SIZE];
-};
+}; struct Pessoa pE[SIZE];
 
 
 struct Palestra{
@@ -19,10 +19,11 @@ struct Palestra{
     char nomeDaPalestra[SIZE];
     char descDaPalestra[DESC];
     int localDaPalestra;
-};
+}; struct Palestra pA[SIZE];
+
 void novaPessoa(void){
     int i;
-    for(i=0;i<100;i++){
+    for(i=0;i<SIZE;i++){
         struct Pessoa pE[i];
         void cadastraPessoa(void);
         cadastraPessoa();
@@ -31,7 +32,7 @@ void novaPessoa(void){
 }
 void novaPalestra(void){
     int i;
-    for(i=0;i<100;i++){
+    for(i=0;i<SIZE;i++){
         struct Palestra pA[i];
         void CadastrarPalestra(void);
         CadastrarPalestra();
@@ -40,45 +41,54 @@ void novaPalestra(void){
 }
 
 void cadastraPessoa(void){
-    struct Pessoa pE;
+    //struct Pessoa pE;
     printf("digite seu nome:");
-    fgets(pE.nome,SIZE,stdin);
+    fgets(pE[SIZE].nome,SIZE,stdin);
 
     printf("digite seu email:");
-    fgets(pE.email,SIZE,stdin);
+    fgets(pE[SIZE].email,SIZE,stdin);
 
     printf("digite sua idade:");
-    scanf("%d",&pE.idade);
+    scanf("%d",&pE[SIZE].idade);
     fflush(stdin);
     printf("digite seu cpf:");
-    fgets(pE.cpf,CP,stdin);
+    fgets(pE[SIZE].cpf,CP,stdin);
 
     printf("digite 1 se tiver deficiencia ou 2 caso nao tenha:");
-    scanf("%d",&pE.deficiencia);
+    scanf("%d",&pE[SIZE].deficiencia);
     fflush(stdin);
-    if(pE.deficiencia==1){
+    if(pE[SIZE].deficiencia==1){
         printf("diga a sua deficiencia:");
-        fgets(pE.descDef, SIZE, stdin);
+        fgets(pE[SIZE].descDef, SIZE, stdin);
     }else{
-        printf("obrigado pelo cadastra");
+        printf("aguarde");
     }
 
 }
 
 void CadastrarPalestra(void){
-    struct Palestra pA;
+    //struct Palestra pA;
 
 
     printf("Nome do Palestrante:");
-    fgets(pA.nomeDoPalestrante, SIZE, stdin);
+    fgets(pA[SIZE].nomeDoPalestrante, SIZE, stdin);
     printf("Nome da Palestra:");
-    fgets(pA.nomeDaPalestra, SIZE, stdin);
+    fgets(pA[SIZE].nomeDaPalestra, SIZE, stdin);
     printf("descricao da palestra:");
-    fgets(pA.descDaPalestra, DESC, stdin);
+    fgets(pA[SIZE].descDaPalestra, DESC, stdin);
     printf("local da palestra");
     printf("1-Cancioneira\n 2-Rua da Paz\n 3-bla \n 4-blabla\n");
-    scanf("%d", &pA.localDaPalestra);
+    scanf("%d", &pA[SIZE].localDaPalestra);
     fflush(stdin);
+
+}
+
+void mostrarPessoa(void){
+
+    printf("%s",pE[SIZE].nome);
+    printf("%s",pE[SIZE].email);
+    printf("%d",pE[SIZE].idade);
+    printf("%d",pE[SIZE].deficiencia);
 
 }
 

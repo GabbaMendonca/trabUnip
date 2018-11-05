@@ -38,7 +38,6 @@
 		<Unit filename="menu.h" />
 		<Unit filename="menuAdm.h" />
 		<Unit filename="opcoes.h" />
-		<Unit filename="teste.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

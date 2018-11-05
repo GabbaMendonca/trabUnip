@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1541415817 source:c:\users\rodrigo\desktop\prog\novtrab\trab\main.c
+	<stdio.h>
+	<stdlib.h>
+	"procCpf.h"
+
+1541300372 c:\users\rodrigo\desktop\prog\novtrab\trab\opcoes.h
+	"menu.h"
+	"teste.h"
+
+1541300367 c:\users\rodrigo\desktop\prog\novtrab\trab\menu.h
+	"cad.h"
+	"teste.h"
+
+1541416683 c:\users\rodrigo\desktop\prog\novtrab\trab\cad.h
+
+1541300273 c:\users\rodrigo\desktop\prog\novtrab\trab\teste.h
+
+1541370631 source:c:\users\rodrigo\desktop\prog\novtrab\trab\untitled2.c
+	<stdio.h>
+
+1541416714 c:\users\rodrigo\desktop\prog\novtrab\trab\proccpf.h
+	"cad.h"
+
